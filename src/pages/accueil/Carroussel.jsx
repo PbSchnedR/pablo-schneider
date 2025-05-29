@@ -1,14 +1,13 @@
 import { motion } from 'framer-motion';
-import DechiffrementTitle from '../../components/DechiffrementTitle';
 import { useEffect, useRef, useState } from 'react';
 
-import html from '../../assets/carroussel/html.png';
-import css from '../../assets/carroussel/css.png';
+import html from '../../assets/carroussel/HTML.png';
+import css from '../../assets/carroussel/CSS.png';
 import js from '../../assets/carroussel/JS.png';
 import react from '../../assets/carroussel/react.png';
 import nodejs from '../../assets/carroussel/nodejs.png';
 import ts from '../../assets/carroussel/TS.png';
-import python from '../../assets/carroussel/Python.png';
+import python from '../../assets/carroussel/python.png';
 import godot from '../../assets/carroussel/godot.png';
 import vbox from '../../assets/carroussel/vbox.png';
 import tailwind from '../../assets/carroussel/tailwind.png';
