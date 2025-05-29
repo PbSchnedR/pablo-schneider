@@ -1,6 +1,7 @@
 import Sidebar from '../../Sidebar';
 import DechiffrementTitle from '../../components/DechiffrementTitle';
 
+import class_video from '../../assets/class.mp4';
 
 const Projets_title = () => {
     return (
@@ -16,7 +17,7 @@ const Projets_title = () => {
                playsInline
                className="absolute inset-0 w-full h-full object-cover"
            >
-               <source src="/src/assets/class.mp4" type="video/mp4" />
+               <source src={class_video} type="video/mp4" />
            </video>
            
            {/* Overlay pour assombrir la vidéo sur mobile */}

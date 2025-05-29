@@ -23,11 +23,7 @@ const Footer = () => {
                                         Projets
                                     </a>
                                 </li>
-                                <li>
-                                    <a href="#contact" className="text-white hover:text-[#00ff99] transition-colors" style={{ fontFamily: "'Fira Mono', monospace" }}>
-                                        Contact
-                                    </a>
-                                </li>
+                                
                             </ul>
                         </div>
 
@@ -40,13 +36,13 @@ const Footer = () => {
                                 <p className="text-white" style={{ fontFamily: "'Fira Mono', monospace" }}>
                                     <FaEnvelope className="inline mr-2" />
                                     <a href="mailto:votre@email.com" className="hover:text-[#00ff99] transition-colors">
-                                        votre@email.com
+                                        pablo.schneider69@gmail.com
                                     </a>
                                 </p>
                                 <p className="text-white" style={{ fontFamily: "'Fira Mono', monospace" }}>
                                     <FaPhone className="inline mr-2" />
                                     <a href="tel:+33600000000" className="hover:text-[#00ff99] transition-colors">
-                                        +33 6 00 00 00 00
+                                        +33 7 82 91 75 40
                                     </a>
                                 </p>
                             </div>
@@ -58,10 +54,10 @@ const Footer = () => {
                                 Réseaux sociaux
                             </h3>
                             <div className="flex space-x-4">
-                                <a href="https://github.com/votre-username" target="_blank" rel="noopener noreferrer" className="text-white hover:text-[#00ff99] transition-colors">
+                                <a href="https://github.com/PbSchnedR" target="_blank" rel="noopener noreferrer" className="text-white hover:text-[#00ff99] transition-colors">
                                     <FaGithub size={24} />
                                 </a>
-                                <a href="https://linkedin.com/in/votre-username" target="_blank" rel="noopener noreferrer" className="text-white hover:text-[#00ff99] transition-colors">
+                                <a href="https://www.linkedin.com/in/pablo-schneider-0846392b4/" target="_blank" rel="noopener noreferrer" className="text-white hover:text-[#00ff99] transition-colors">
                                     <FaLinkedin size={24} />
                                 </a>
                             </div>

@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import DechiffrementTitle from '../../components/DechiffrementTitle';
 import { useEffect, useRef, useState } from 'react';
 
-const ProjectCard = ({ title, description, image, isReversed }) => {
+const ProjectCard = ({ title, description, media, isVideo, isReversed }) => {
     const [isVisible, setIsVisible] = useState(false);
     const titleRef = useRef(null);
 
@@ -31,20 +31,33 @@ const ProjectCard = ({ title, description, image, isReversed }) => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
         >
-            {/* Image toujours au-dessus sur mobile/tablette, à gauche/droite sur desktop */}
+            {/* Media (Image ou Vidéo) toujours au-dessus sur mobile/tablette, à gauche/droite sur desktop */}
             <motion.div 
                 className="w-full h-64 sm:h-80 md:h-96 lg:w-1/2 lg:h-full flex items-center justify-center p-4 lg:p-8 order-1"
                 initial={{ x: isReversed && window.innerWidth >= 1024 ? 50 : -50, opacity: 0 }}
                 whileInView={{ x: 0, opacity: 1 }}
                 transition={{ duration: 0.8 }}
             >
-                <motion.img 
-                    src={image} 
-                    alt={title} 
-                    className="w-full h-full object-contain rounded-xl shadow-lg"
-                    whileHover={{ scale: 1.05 }}
-                    transition={{ duration: 0.3 }}
-                />
+                {isVideo ? (
+                    <motion.video 
+                        src={media} 
+                        className="w-full h-full object-contain rounded-xl shadow-lg"
+                        whileHover={{ scale: 1.05 }}
+                        transition={{ duration: 0.3 }}
+                        controls
+                        autoPlay
+                        muted
+                        loop
+                    />
+                ) : (
+                    <motion.img 
+                        src={media} 
+                        alt={title} 
+                        className="w-full h-full object-contain rounded-xl shadow-lg"
+                        whileHover={{ scale: 1.05 }}
+                        transition={{ duration: 0.3 }}
+                    />
+                )}
             </motion.div>
 
             {/* Titre et texte */}

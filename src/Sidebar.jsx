@@ -5,6 +5,13 @@ const Navbar = () => {
   const navigate = useNavigate();
   const [isOpen, setIsOpen] = useState(false);
 
+  const scrollToFooter = (e) => {
+    e.preventDefault();
+    const footer = document.querySelector('footer');
+    footer.scrollIntoView({ behavior: 'smooth' });
+    setIsOpen(false);
+  };
+
   return (
     <nav className="fixed top-0 left-0 w-full z-50 bg-black/40 backdrop-blur-sm">
       {/* Burger Menu Button */}
@@ -54,7 +61,7 @@ const Navbar = () => {
               href="#contact"
               className="nav-link text-xl block w-full py-2"
               style={{ fontFamily: "'Fira Mono', monospace" }}
-              onClick={() => setIsOpen(false)}
+              onClick={scrollToFooter}
             >
               Contact
             </a>
@@ -113,6 +120,7 @@ const Navbar = () => {
             href="#contact"
             className="nav-link text-2xl"
             style={{ fontFamily: "'Fira Mono', monospace" }}
+            onClick={scrollToFooter}
           >
             Contact
           </a>

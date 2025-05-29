@@ -1,5 +1,6 @@
 import Sidebar from '../../Sidebar';
 import { motion } from 'framer-motion';
+import techno from '../../assets/techno.mp4';
 
 const Veille_title = () => {
     return (
@@ -12,7 +13,7 @@ const Veille_title = () => {
                 playsInline
                 className="absolute top-0 left-0 w-full h-full object-cover"
             >
-                <source src="/src/assets/techno.mp4" type="video/mp4" />
+                <source src={techno} type="video/mp4" />
             </video>
             <motion.div 
                 className="absolute inset-0 bg-black/30"

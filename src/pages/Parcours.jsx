@@ -26,19 +26,19 @@ const Parcours = () => {
 
     const timelineData = [
         {
-            year: "2023 - 2024",
+            year: "2024 - 2026",
             title: "BTS SIO - Option SLAM",
-            description: "Formation en développement web et applications au lycée Saint-Joseph de Gabarret. Spécialisation en développement d'applications et sites web. Projets : Portfolio personnel, Application de gestion pour laboratoire."
+            description: "Formation en développement web et applications à Nexa Digital School."
         },
         {
-            year: "2022 - 2023",
-            title: "Stage Développeur Web",
-            description: "Stage de 3 mois chez TechInnovate. Développement d'interfaces utilisateur avec React et intégration d'APIs REST. Participation à la refonte du site e-commerce."
+            year: "2024",
+            title: "Début du parcours autodidacte",
+            description: "Début du parcours autodidacte en informatique à côté des cours du lycée. Découverte du développement et des langages de programmation."
         },
         {
-            year: "2021 - 2022",
+            year: "2021 - 2024",
             title: "Baccalauréat Général",
-            description: "Obtention du baccalauréat avec mention Bien. Spécialités : Numérique et Sciences Informatiques (NSI), Mathématiques. Projet de fin d'année : Développement d'un jeu vidéo en Python."
+            description: "Obtention du baccalauréat avec mention Bien. Spécialités : Sciences Économiques et Sociales (S.E.S) et Géopolitique."
         },
     ];
 

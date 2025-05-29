@@ -1,6 +1,8 @@
 import React from 'react';
 import PostCard from './PostCard';
 
+import chatgpt from '../../assets/veille/chatgpt-talk.mp4';
+
 const posts = [
     {
         id: 1,
@@ -18,7 +20,7 @@ const posts = [
         author: "Pablo Schneider",
         content: "La cybersécurité devient de plus en plus cruciale dans notre monde numérique. Les attaques sophistiquées nécessitent des solutions innovantes et une vigilance constante...",
         tags: ["Sécurité", "Cybersécurité", "Protection"],
-        media: { type: 'video', url: '../../src/assets/veille/chatgpt-talk.mp4', source: 'https://twitter.com/example' }
+        media: { type: 'video', url: chatgpt, source: 'https://twitter.com/example' }
     },
     {
         id: 3,
@@ -27,7 +29,7 @@ const posts = [
         author: "Pablo Schneider",
         content: "La cybersécurité devient de plus en plus cruciale dans notre monde numérique. Les attaques sophistiquées nécessitent des solutions innovantes et une vigilance constante...",
         tags: ["Sécurité", "Cybersécurité", "Protection"],
-        media: { type: 'video', url: '../../src/assets/veille/chatgpt-talk.mp4', source: 'https://twitter.com/example' }
+        media: { type: 'video', url: chatgpt, source: 'https://twitter.com/example' }
     }
 ];
 

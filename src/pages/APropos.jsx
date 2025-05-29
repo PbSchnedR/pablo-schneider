@@ -1,4 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
+import fond_noir from '../assets/fond-noir.png';
+import learning from '../assets/learning.mp4';
 
 const APropos = () => {
     const [isVisible, setIsVisible] = useState(false);
@@ -27,7 +29,7 @@ const APropos = () => {
             <div className="w-full lg:w-1/2 relative flex items-center justify-center bg-black h-screen">
                 {/* Image de fond */}
                 <img
-                    src="/src/assets/fond-noir.png"
+                    src={fond_noir}
                     alt="fond"
                     className="absolute top-0 left-0 w-full h-full object-cover z-0"
                 />
@@ -44,9 +46,9 @@ const APropos = () => {
                     className="text-2xl md:text-4xl text-gray-200 text-center"
                     style={{ fontFamily: "'Fira Mono', monospace" }}
                     >
-                    Passionné par le développement web, j'aime créer des interfaces modernes et dynamiques.<br />
-                    Mon parcours m'a permis d'explorer de nombreux langages et frameworks, avec une préférence pour les technologies JavaScript et React.<br />
-                    Curieux, rigoureux et créatif, je cherche toujours à apprendre et à innover.
+                    Passionné par le développement informatique, j'aime concrétiser mes idées par le code et les innovations dans la tech.<br />
+                    Mon parcours autodidacte m'a permis de découvrir ce monde et d'accéder au BTS SIO malgré un parcours radicalement différent au lycée.<br />
+                    Curieux et rigoureux, je cherche toujours à apprendre et à innover.
                     </p>
                 </div>
                 <style>
@@ -89,7 +91,7 @@ const APropos = () => {
                     playsInline
                     className="w-full h-full object-cover"
                 >
-                    <source src="/src/assets/learning.mp4" type="video/mp4" />
+                    <source src={learning} type="video/mp4" />
                 </video>
             </div>
         </div>
