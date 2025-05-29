@@ -6,6 +6,8 @@ import { motion } from 'framer-motion';
 import Carroussel from './accueil/Carroussel';
 import Footer from '../components/Footer';
 import APropos from './APropos';
+
+import fond_anim from '../assets/fond-anim.mp4';
 const Accueil = () => {
   return (
     <>
@@ -18,7 +20,7 @@ const Accueil = () => {
         playsInline
         className="absolute top-0 left-0 w-full h-full object-cover"
       >
-        <source src="/src/assets/fond-anim.mp4" type="video/mp4" />
+          <source src={fond_anim} type="video/mp4" />
       </video>
       <motion.div 
         className="absolute inset-0 bg-black/30"
