@@ -44,7 +44,6 @@ const ProjectCard = ({ title, description, media, isVideo, isReversed }) => {
                         className="w-full h-full object-contain rounded-xl shadow-lg"
                         whileHover={{ scale: 1.05 }}
                         transition={{ duration: 0.3 }}
-                        controls
                         autoPlay
                         muted
                         loop
@@ -70,7 +69,7 @@ const ProjectCard = ({ title, description, media, isVideo, isReversed }) => {
             >
                 <DechiffrementTitle title={title} isVisible={isVisible} />
                 <motion.p 
-                    className="text-white mt-4 text-base sm:text-lg md:text-xl lg:text-lg text-center"
+                    className="text-white mt-4 text-base sm:text-lg md:text-xl lg:text-2xl text-center"
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
                     transition={{ delay: 0.5 }}
