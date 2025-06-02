@@ -1,9 +1,15 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { HiMenu, HiX } from 'react-icons/hi';
 
 const Navbar = () => {
   const navigate = useNavigate();
   const [isOpen, setIsOpen] = useState(false);
+
+  const handleNav = (path) => {
+    navigate(path);
+    setIsOpen(false);
+  };
 
   const scrollToFooter = (e) => {
     e.preventDefault();
@@ -14,86 +20,65 @@ const Navbar = () => {
 
   return (
     <nav className="fixed top-0 left-0 w-full z-50 bg-black/40 backdrop-blur-sm">
-      {/* Burger Menu Button */}
-      <button 
-        className="md:hidden absolute right-4 top-4 z-50 p-2"
-        onClick={() => setIsOpen(!isOpen)}
-        aria-label="Menu"
-      >
-        <div className="w-6 h-6 flex flex-col justify-around">
-          <span className={`block w-full h-0.5 bg-white transform transition-all duration-300 ${isOpen ? 'rotate-45 translate-y-2.5' : ''}`}></span>
-          <span className={`block w-full h-0.5 bg-white transition-all duration-300 ${isOpen ? 'opacity-0' : ''}`}></span>
-          <span className={`block w-full h-0.5 bg-white transform transition-all duration-300 ${isOpen ? '-rotate-45 -translate-y-2.5' : ''}`}></span>
-        </div>
-      </button>
+      {/* Version Mobile */}
+      <div className="md:hidden">
+        {/* Bouton menu burger */}
+        <button 
+          onClick={() => setIsOpen(!isOpen)}
+          className="fixed top-4 right-4 z-50 p-2 rounded-md bg-black/80 text-white hover:bg-[#00ff99] transition-colors duration-300"
+          aria-label="Ouvrir le menu"
+        >
+          {isOpen ? <HiX className="w-7 h-7" /> : <HiMenu className="w-7 h-7" />}
+        </button>
+        
+        {/* Overlay */}
+        {isOpen && (
+          <div 
+            className="fixed inset-0 bg-black/80 z-40"
+            onClick={() => setIsOpen(false)}
+          />
+        )}
 
-      {/* Menu latéral mobile */}
-      <div className={`md:hidden fixed top-0 right-0 h-full w-3/4 max-w-xs bg-gray-900 shadow-lg z-40 transform transition-transform duration-300 ${isOpen ? 'translate-x-0' : 'translate-x-full'}`}>
-        <ul className="flex flex-col items-start justify-start h-full gap-6 p-8 pt-24">
-          <li className="w-full">
-            <a
-              href="#accueil"
-              className="nav-link text-xl block w-full py-2"
-              style={{ fontFamily: "'Fira Mono', monospace" }}
-              onClick={() => {
-                navigate('/');
-                setIsOpen(false);
-              }}
-            >
-              Accueil
-            </a>
-          </li>
-          <li className="w-full">
-            <a
-              href="#projets"
-              className="nav-link text-xl block w-full py-2"
-              style={{ fontFamily: "'Fira Mono', monospace" }}
-              onClick={() => {
-                navigate('/projets');
-                setIsOpen(false);
-              }}
-            >
-              Projets
-            </a>
-          </li>
-          <li className="w-full">
-            <a
-              href="#contact"
-              className="nav-link text-xl block w-full py-2"
-              style={{ fontFamily: "'Fira Mono', monospace" }}
-              onClick={scrollToFooter}
-            >
-              Contact
-            </a>
-          </li>
-          <li className="w-full">
+        {/* Sidebar mobile */}
+        <aside
+          className={`
+            fixed top-0 left-0 h-screen bg-black text-white flex flex-col shadow-lg z-50
+            transition-transform duration-300 ease-in-out
+            w-72 max-w-full
+            rounded-none
+            ${isOpen ? 'translate-x-0 rounded-l-3xl' : '-translate-x-full'}
+          `}
+          style={{ minWidth: '18rem', fontFamily: "'Fira Mono', monospace" }}
+        >
+          <nav className="flex flex-col gap-8 p-8 pt-24">
+            <a className="text-xl nav-link hover:text-[#00ff99] transition-colors duration-300" onClick={() => handleNav('/')} href="#accueil">Accueil</a>
+            <a className="text-xl nav-link hover:text-[#00ff99] transition-colors duration-300" onClick={() => handleNav('/projets')} href="#projets">Projets</a>
+            <a className="text-xl nav-link hover:text-[#00ff99] transition-colors duration-300" onClick={scrollToFooter} href="#contact">Contact</a>
             <select 
-              className="nav-link text-xl bg-gray-800 border border-[#00ff99] rounded px-4 py-2 w-full" 
-              style={{ fontFamily: "'Fira Mono', monospace" }} 
+              className="nav-link text-xl bg-black border border-[#00ff99] rounded px-4 py-2 mt-4 text-white hover:bg-[#00ff99]/10 transition-colors duration-300"
               defaultValue=""
               onChange={e => {
                 switch(e.target.value) {
                   case "presentation":
-                    navigate('/presentation-bts');
+                    handleNav('/presentation-bts');
                     break;
                   case "veille-technologique":
-                    navigate('/veille-technologique');
+                    handleNav('/veille-technologique');
                     break;
                   default:
                     break;
                 }
-                setIsOpen(false);
               }}
             >
               <option value="" disabled hidden>BTS SIO</option>
               <option value="presentation">Présentation</option>
               <option value="veille-technologique">Veille Technologique</option>
             </select>
-          </li>
-        </ul>
+          </nav>
+        </aside>
       </div>
 
-      {/* Desktop Menu */}
+      {/* Version Desktop */}
       <ul className="hidden md:flex justify-center gap-8 py-4">
         <li>
           <a
@@ -127,7 +112,7 @@ const Navbar = () => {
         </li>
         <li className="flex items-center">
           <select 
-            className="nav-link text-2xl appearance-none " 
+            className="nav-link text-2xl appearance-none" 
             style={{ fontFamily: "'Fira Mono', monospace" }} 
             defaultValue=""
             onChange={e => {
@@ -143,12 +128,13 @@ const Navbar = () => {
               }
             }}
           >
-    <option value="" disabled hidden>BTS SIO</option>
-    <option value="presentation" className="bg-black">Présentation</option>
-    <option value="veille-technologique" className="bg-black">Veille Technologique</option>
-  </select>
-</li>
+            <option value="" disabled hidden>BTS SIO</option>
+            <option value="presentation" className="bg-black">Présentation</option>
+            <option value="veille-technologique" className="bg-black">Veille Technologique</option>
+          </select>
+        </li>
       </ul>
+
       <style>
         {`
           .nav-link {

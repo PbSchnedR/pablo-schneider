@@ -37,7 +37,7 @@ const APropos = () => {
                 <div className="relative z-20 flex flex-col items-center justify-evenly w-full h-full p-8 md:p-0">
                     <h2
                     ref={titleRef}
-                    className={`text-3xl md:text-5xl font-bold mb-6 ${isVisible ? 'typewriter-apropos' : ''}`}
+                    className={`text-2xl md:text-5xl font-bold mb-6 ${isVisible ? 'typewriter-apropos' : ''}`}
                     style={{ fontFamily: "'Fira Mono', monospace", color: "#fff" }}
                     >
                     À propos de moi :

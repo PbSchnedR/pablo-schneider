@@ -214,7 +214,7 @@ const VeilleMethod = () => {
 
                     @keyframes typing-method-bottom {
                         from { width: 0 }
-                        to { width: 50% }
+                        to { width: 60% }
                     }
 
                     @keyframes blink-caret-top {

@@ -88,7 +88,7 @@ const Carroussel = () => {
             >
                 <h2
                     ref={titleRef}
-                    className={`text-4xl md:text-6xl lg:text-7xl font-bold ${isVisible ? 'typewriter-competences' : ''}`}
+                    className={`text-3xl md:text-6xl lg:text-7xl font-bold ${isVisible ? 'typewriter-competences' : ''}`}
                     style={{ fontFamily: "'Fira Mono', monospace", color: "#fff" }}
                 >
                     Mes compétences
