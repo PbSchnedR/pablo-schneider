@@ -35,13 +35,13 @@ const Footer = () => {
                             <div className="space-y-2 text-center">
                                 <p className="text-white" style={{ fontFamily: "'Fira Mono', monospace" }}>
                                     <FaEnvelope className="inline mr-2" />
-                                    <a href="mailto:votre@email.com" className="hover:text-[#00ff99] transition-colors">
+                                    <a href="mailto:pablo.schneider69@gmail.com" className="hover:text-[#00ff99] transition-colors">
                                         pablo.schneider69@gmail.com
                                     </a>
                                 </p>
                                 <p className="text-white" style={{ fontFamily: "'Fira Mono', monospace" }}>
                                     <FaPhone className="inline mr-2" />
-                                    <a href="tel:+33600000000" className="hover:text-[#00ff99] transition-colors">
+                                    <a href="tel:+33782917540" className="hover:text-[#00ff99] transition-colors">
                                         +33 7 82 91 75 40
                                     </a>
                                 </p>

@@ -59,6 +59,22 @@ const Navbar = () => {
               defaultValue=""
               onChange={e => {
                 switch(e.target.value) {
+                  case "LMDC":
+                    handleNav('/LMDC');
+                    break;
+                  default:
+                    break;
+                }
+              }}
+            >
+              <option value="" disabled hidden>Alternance</option>
+              <option value="LMDC">LMDC</option>
+            </select>
+            <select 
+              className="nav-link text-xl bg-black border border-[#00ff99] rounded px-4 py-2 mt-4 text-white hover:bg-[#00ff99]/10 transition-colors duration-300"
+              defaultValue=""
+              onChange={e => {
+                switch(e.target.value) {
                   case "presentation":
                     handleNav('/presentation-bts');
                     break;
@@ -92,7 +108,6 @@ const Navbar = () => {
         </li>
         <li>
           <a
-            href="#projets"
             className="nav-link text-2xl"
             style={{ fontFamily: "'Fira Mono', monospace" }}
             onClick={() => navigate('/projets')}
@@ -117,6 +132,26 @@ const Navbar = () => {
             defaultValue=""
             onChange={e => {
               switch(e.target.value) {
+                case "LMDC":
+                  navigate('/LMDC');
+                  break;
+                
+                default:
+                  break;
+              }
+            }}
+          >
+            <option value="" disabled hidden>Alternance</option>
+            <option value="LMDC" className="bg-black">LMDC</option>
+          </select>
+        </li>
+        <li className="flex items-center">
+          <select 
+            className="nav-link text-2xl appearance-none" 
+            style={{ fontFamily: "'Fira Mono', monospace" }} 
+            defaultValue=""
+            onChange={e => {
+              switch(e.target.value) {
                 case "presentation":
                   navigate('/presentation-bts');
                   break;
@@ -133,6 +168,7 @@ const Navbar = () => {
             <option value="veille-technologique" className="bg-black">Veille Technologique</option>
           </select>
         </li>
+       
       </ul>
 
       <style>
