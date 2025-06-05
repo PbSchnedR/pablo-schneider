@@ -3,7 +3,7 @@ import Accueil from './pages/Accueil';
 import Presentation_bts from './pages/Presentation_bts';
 import Projets from './pages/projets/Projets';
 import Veille from './pages/Veille';
-import LMDC from './pages/LMDC';
+import LMDC from './pages/lmdc';
 import { useEffect } from 'react';
 
 function ScrollToTop() {
