@@ -102,7 +102,7 @@ const Veille_content = () => {
                             link: item.link || '#',
                             date: item.pubDate ? new Date(item.pubDate).toLocaleDateString('fr-FR') : 'Date inconnue',
                             author: item['dc:creator'] || item.author || "Auteur inconnu",
-                            content: getExcerpt(summary, 250),
+                            content: item.description || 'Aucun contenu disponible',
                             tags: ["RSS", "Tech"],
                             media: { 
                                 type: 'image', 
