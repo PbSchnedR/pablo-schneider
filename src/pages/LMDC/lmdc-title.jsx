@@ -1,9 +1,6 @@
-import Sidebar from "../../Sidebar";
-
 const LMDC_title = () => {
     return (
         <div className="flex flex-col items-center justify-center h-screen bg-black">
-            <Sidebar />
             <h1 className="text-9xl font-bold text-white neon-text">
                 LMDC
             </h1>

@@ -3,10 +3,12 @@ import Presentation_entreprise from './LMDC/presentation_entreprise';
 import Missions from './LMDC/missions';
 import Footer from '../components/Footer';
 import { motion } from 'framer-motion';
+import Sidebar from '../Sidebar';
 
 const LMDC = () => {
     return (
         <div className="relative w-full overflow-hidden flex flex-col">
+            <Sidebar />
             <motion.div
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}

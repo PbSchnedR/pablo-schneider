@@ -14,12 +14,12 @@ const Footer = () => {
                             </h3>
                             <ul className="space-y-2">
                                 <li>
-                                    <a href="#accueil" className="text-white hover:text-[#00ff99] transition-colors" style={{ fontFamily: "'Fira Mono', monospace" }}>
+                                    <a href="/" className="text-white hover:text-[#00ff99] transition-colors" style={{ fontFamily: "'Fira Mono', monospace" }}>
                                         Accueil
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#projets" className="text-white hover:text-[#00ff99] transition-colors" style={{ fontFamily: "'Fira Mono', monospace" }}>
+                                    <a href="/projets" className="text-white hover:text-[#00ff99] transition-colors" style={{ fontFamily: "'Fira Mono', monospace" }}>
                                         Projets
                                     </a>
                                 </li>
